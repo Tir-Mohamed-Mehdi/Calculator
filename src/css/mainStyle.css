@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Raleway:wght@400;700&display=swap");
+
+html {
+  font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --main-color: #222135;
+  --second-color: #6f3df4;
+  --sub-color: #f2c335;
+  --light-color: #e2dfeb;
+  --white-color: #ffffff;
+
+  --font-family-I: "Inter", sans-serif;
+  --font-family-R: "Raleway", sans-serif;
+
+  --fw-400: 400;
+  --fw-700: 700;
+}
+
+body {
+  font-family: var(--font-family-R);
+  background-color: var(--main-color);
+  padding: 2rem 5rem;
+}
+
+/* this is the header styling. */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2rem;
+
+  color: var(--white-color);
+  font-size: 0.9rem;
+
+  margin-bottom: 1rem;
+}
+
+header img {
+  width: 4rem;
+}
+
+/* this is the main part styling. */
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main .container {
+  background-color: var(--white-color);
+  width: 45rem;
+  padding: 3rem 6rem;
+  border-radius: 1.5rem;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+section.result {
+  background-color: var(--light-color);
+  height: 6rem;
+  margin-bottom: 4rem;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  padding: 1.5rem 2rem;
+  border-radius: 1rem;
+
+  font-family: var(--font-family-I);
+  font-size: 4rem;
+}
+
+section.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  gap: 1rem;
+}
+
+span {
+  display: grid;
+  place-items: center;
+
+  padding: 0.7rem;
+  border-radius: 1.5rem;
+
+  font-family: var(--font-family-I);
+  font-size: 4rem;
+  font-weight: var(--fw-700);
+  color: var(--white-color);
+
+  cursor: pointer;
+}
+
+span.btn_c1 {
+  grid-column: 1/5;
+  background-color: #ff5252;
+  transition: all 200ms;
+}
+span.btn_c1:active {
+  background-color: hsl(0, 53%, 52%);
+}
+
+span.btn_n {
+  background-color: var(--second-color);
+  transition: all 200ms;
+}
+span.btn_n:active {
+  background-color: #4e25c0;
+}
+
+span.btn_i {
+  background-color: var(--sub-color);
+  transition: all 200ms;
+}
+span.btn_i:active {
+  background-color: #d4ab2d;
+}
+
+span.btn_e {
+  background-color: var(--main-color);
+  transition: all 200ms;
+}
+span.btn_e:active {
+  background-color: #12111b;
+}
+
+img {
+  width: 3rem;
+}
+
+img[alt="Dot"] {
+  width: 0.8rem;
+}
+
+span[data-num="="] {
+  grid-row: 6/7;
+  grid-column: -5/-1;
+}
+
+span[data-num="+"] {
+  grid-column: -3/-1;
+}
